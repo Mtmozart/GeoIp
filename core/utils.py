@@ -17,7 +17,7 @@ def yelp_search(keyword=None, location=None):
     r = request.get(YELP_SEARCH_ENDPOINT, headers=headers, params=params)
     return r.json()
 
-def get_client_city_data():
+def get_client_data():
     g = GeoIp2()
     ip = get_random_ip()
     try:
